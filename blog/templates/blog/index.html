@@ -1,5 +1,46 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block title %}Yet Another Blog{% endblock %}
+{% block css_files %}
+    <link rel="stylesheet" href="{% static 'blog/index.css' %}">
+{% endblock %}
 {% block content %}
-<h1>Welcome to this blog!</h1>
+<header id="main-navigation">    
+    <h1><a href="{% url 'starting-page' %}">Yet Another Blog</a></h1>
+    <nav>
+        <a href="">All Posts</a>
+    </nav>
+</header>
+<section id="welcome">
+    <header>
+        <img src="{% static 'blog/images/alpha-and-omega.png' %}" alt="Yet Another Blog image"/>
+        <h2>Yet Another Blog</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pretium feugiat purus sed feugiat. Curabitur pharetra velit eu justo fermentum maximus. Nullam tincidunt laoreet orci. Morbi dignissim justo id libero hendrerit hendrerit. Fusce at nisi et augue tristique imperdiet ut eget ante. Vivamus ullamcorper convallis felis, eu congue libero fringilla a. In hac habitasse platea dictumst.
+        </p>
+    </header>
+</section>
+<section id="latest-posts">
+    <h2>Latest Posts</h2>
+    <ul>
+        <article class="post">
+            <img src="{% static 'blog/images/mountains.jpg' %}" alt="Mountain hiking">
+            <div class="post__content">
+                <h3>Mountain Hiking</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pretium feugiat purus sed feugiat. Curabitur pharetra velit eu justo fermentum maximus.
+                </p>
+            </div>
+        </article>
+    </ul>
+</section>
+<section id="about">
+    <h2>About us</h2>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pretium feugiat purus sed feugiat. Curabitur pharetra velit eu justo fermentum maximus.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pretium feugiat purus sed feugiat. Curabitur pharetra velit eu justo fermentum maximus. Nullam tincidunt laoreet orci. Morbi dignissim justo id libero hendrerit hendrerit. Fusce at nisi et augue tristique imperdiet ut eget ante. Vivamus ullamcorper convallis felis, eu congue libero fringilla a. In hac habitasse platea dictumst.
+    </p>
+</section>
 {% endblock %}
