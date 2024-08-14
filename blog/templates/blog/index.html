@@ -11,14 +11,16 @@
         <img src="{% static 'blog/images/alpha-and-omega.png' %}" alt="Yet Another Blog image"/>
         <h2>Yet Another Blog</h2>
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pretium feugiat purus sed feugiat. Curabitur pharetra velit eu justo fermentum maximus. Nullam tincidunt laoreet orci. Morbi dignissim justo id libero hendrerit hendrerit. Fusce at nisi et augue tristique imperdiet ut eget ante. Vivamus ullamcorper convallis felis, eu congue libero fringilla a. In hac habitasse platea dictumst.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pretium feugiat purus sed feugiat. Curabitur pharetra velit eu justo fermentum maximus.
         </p>
     </header>
 </section>
 <section id="latest-posts">
     <h2>Latest Posts</h2>
     <ul>
-        {% include 'blog/includes/post.html' %}
+        {% for post in posts %}
+            {% include 'blog/includes/post.html' %}
+        {% endfor %}
     </ul>
 </section>
 <section id="about">
