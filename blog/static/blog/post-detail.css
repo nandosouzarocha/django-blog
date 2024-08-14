@@ -45,6 +45,7 @@ body {
   
   #summary address {
     font-weight: bold;
+    font-size: 1.5rem;
   }
   
   #summary time {
